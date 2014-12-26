@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="port">
+      <UniqueIdentifier>{5b6175ec-2f58-4344-a3c5-db34eca66156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl">
+      <UniqueIdentifier>{0e26a4b1-bfd3-4b4a-a0f5-df8530e54d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loader">
+      <UniqueIdentifier>{f0f72f93-10d0-4b7a-b29e-7ae732f1bfcb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="s2_opengl.h">
+      <Filter>port</Filter>
+    </ClInclude>
+    <ClInclude Include="glew.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="glxew.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="wglew.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="s2_util.h" />
+    <ClInclude Include="ImagePng.h">
+      <Filter>loader</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTga.h">
+      <Filter>loader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glew.c">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="s2_util.cpp" />
+    <ClCompile Include="ImagePng.cpp">
+      <Filter>loader</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageTga.cpp">
+      <Filter>loader</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
