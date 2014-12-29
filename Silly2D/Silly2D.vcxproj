@@ -38,17 +38,20 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\DXSDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\DXSDK\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;USE_DX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;d3d11.lib;dxerr.lib;d3dx11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -66,15 +69,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CGraphic.h" />
+    <ClInclude Include="CGUI.h" />
+    <ClInclude Include="CImage.h" />
+    <ClInclude Include="CMath.h" />
+    <ClInclude Include="CMesh.h" />
     <ClInclude Include="glew.h" />
     <ClInclude Include="glxew.h" />
     <ClInclude Include="ImagePng.h" />
     <ClInclude Include="ImageTga.h" />
+    <ClInclude Include="pre.h" />
+    <ClInclude Include="s2_directx.h" />
     <ClInclude Include="s2_opengl.h" />
     <ClInclude Include="s2_util.h" />
     <ClInclude Include="wglew.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CGraphic.cpp" />
+    <ClCompile Include="CGUI.cpp" />
+    <ClCompile Include="CIMage.cpp" />
+    <ClCompile Include="CMath.cpp" />
+    <ClCompile Include="CMesh.cpp" />
     <ClCompile Include="glew.c" />
     <ClCompile Include="ImagePng.cpp" />
     <ClCompile Include="ImageTga.cpp" />

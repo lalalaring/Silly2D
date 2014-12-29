@@ -1,4 +1,5 @@
-
+#ifndef __H_IMAGETGA_H_
+#define __H_IMAGETGA_H_
 //------------------------------------------------------ TGA FORMAT
 #include <stdio.h>
 #include <memory>
@@ -52,3 +53,5 @@ private:
 	void           writeGrayAsRGB(FILE *s, const unsigned char *externalImage, int size);
 	void           writeGray(FILE *s, const unsigned char *externalImage, int size);
 };
+
+#endif // __H_IMAGETGA_H_

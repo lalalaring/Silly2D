@@ -10,6 +10,9 @@
     <Filter Include="loader">
       <UniqueIdentifier>{f0f72f93-10d0-4b7a-b29e-7ae732f1bfcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{7985bf60-b64f-4c73-9e29-361beabb24de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="s2_opengl.h">
@@ -31,6 +34,25 @@
     <ClInclude Include="ImageTga.h">
       <Filter>loader</Filter>
     </ClInclude>
+    <ClInclude Include="s2_directx.h">
+      <Filter>port</Filter>
+    </ClInclude>
+    <ClInclude Include="CMesh.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="CGraphic.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="CImage.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="CMath.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="pre.h" />
+    <ClInclude Include="CGUI.h">
+      <Filter>core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glew.c">
@@ -43,6 +65,21 @@
     </ClCompile>
     <ClCompile Include="ImageTga.cpp">
       <Filter>loader</Filter>
+    </ClCompile>
+    <ClCompile Include="CGraphic.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="CIMage.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="CMath.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="CMesh.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="CGUI.cpp">
+      <Filter>core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
